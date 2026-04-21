@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>放置文字游戏 Demo</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 游戏标题 -->
+    <h1>放置文字游戏 Demo</h1>
+
+    <!-- 状态面板：显示金币、每秒收益、遗物数量 -->
+    <section class="panel">
+      <h2>角色状态</h2>
+      <p>金币：<span id="gold">0</span></p>
+      <p>每秒收益：<span id="gps">1</span></p>
+      <p>遗物：<span id="relic">0</span></p>
+      <p>升级等级：<span id="upgradeLevel">0</span></p>
+    </section>
+
+    <!-- 操作面板 -->
+    <section class="panel">
+      <h2>操作</h2>
+
+      <!-- 手动探索按钮 -->
+      <button id="exploreBtn">探索</button>
+
+      <!-- 购买升级按钮 -->
+      <button id="upgradeBtn">购买升级（花费：<span id="upgradeCost">10</span> 金币）</button>
+
+      <div class="button-row">
+        <!-- 保存按钮 -->
+        <button id="saveBtn">保存</button>
+
+        <!-- 读取按钮 -->
+        <button id="loadBtn">读取</button>
+
+        <!-- 重开按钮 -->
+        <button id="resetBtn" class="danger">重开</button>
+      </div>
+    </section>
+
+    <!-- 日志面板：显示文字剧情/事件 -->
+    <section class="panel">
+      <h2>日志</h2>
+      <div id="log" class="log-box"></div>
+    </section>
+  </div>
+
+  <!-- 入口 JS，使用 type="module" 才能 import/export -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
